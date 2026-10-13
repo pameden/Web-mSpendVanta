@@ -1,0 +1,112 @@
+/* Getting Started guide — only for getting-started.html. Builds on styles.css (same tokens). */
+
+/* A table of contents beside the guide; above it on narrow screens. */
+.guide {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 48px 20px 72px;
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 48px;
+  align-items: start;
+}
+
+.guide-toc {
+  position: sticky;
+  top: 84px;
+  font-size: 15px;
+}
+.guide-toc p {
+  margin: 0 0 8px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.guide-toc ol { list-style: none; margin: 0 0 18px; padding: 0; display: grid; gap: 4px; }
+.guide-toc ol ol { margin: 4px 0 6px 12px; padding-left: 10px; border-left: 1px solid var(--border); }
+.guide-toc a { color: var(--muted); }
+.guide-toc a:hover { color: var(--text); text-decoration: none; }
+.guide-toc > ol > li > a { color: var(--text); font-weight: 600; }
+
+.guide-body { max-width: 740px; min-width: 0; }
+.guide-body h1 { font-size: clamp(32px, 5vw, 42px); line-height: 1.15; margin: 0 0 10px; letter-spacing: -0.01em; }
+.guide-body .lead { color: var(--muted); font-size: 19px; margin: 0 0 8px; }
+
+/* A part ("Part 1 · How mSpendVanta works") */
+.part { padding: 0; margin-top: 56px; scroll-margin-top: 80px; }
+.part-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+.part h2 { text-align: left; font-size: clamp(26px, 3.5vw, 32px); margin: 0 0 10px; }
+.part > p.intro { color: var(--muted); margin: 0 0 8px; }
+
+.topic { margin-top: 36px; scroll-margin-top: 80px; }
+.topic h3 { font-size: 21px; margin: 0 0 10px; }
+.topic h4 { font-size: 17px; margin: 22px 0 6px; }
+.topic p { margin: 0 0 12px; }
+.topic ul, .topic ol { padding-left: 22px; margin: 0 0 14px; }
+.topic li { margin: 6px 0; }
+
+/* Numbered how-to steps */
+ol.how { counter-reset: how; list-style: none; padding: 0; display: grid; gap: 10px; }
+ol.how > li {
+  counter-increment: how;
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 12px;
+  margin: 0;
+}
+ol.how > li::before {
+  content: counter(how);
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 15px;
+}
+
+/* A highlighted key point or tip */
+.key {
+  background: var(--accent-soft);
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin: 14px 0 16px;
+}
+.key p { margin: 0; }
+.key p + p { margin-top: 8px; }
+
+/* App names and on-screen labels */
+.ui { font-weight: 600; }
+.path { font-weight: 600; white-space: nowrap; }
+code {
+  font: 0.88em ui-monospace, "SF Mono", Menlo, monospace;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 1px 5px;
+}
+
+/* Match-text examples */
+.table-wrap { overflow-x: auto; margin: 6px 0 16px; }
+table.examples { border-collapse: collapse; width: 100%; font-size: 15px; }
+table.examples th, table.examples td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+table.examples th { color: var(--muted); font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: 0.04em; }
+.good { color: var(--check); font-weight: 600; }
+.bad { color: #d64545; font-weight: 600; }
+
+@media (max-width: 860px) {
+  .guide { grid-template-columns: 1fr; gap: 24px; padding-top: 32px; }
+  .guide-toc { position: static; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 18px; }
+}

@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Getting Started — mSpendVanta</title>
+  <meta name="description" content="New to mSpendVanta? Learn how it works, then import your first bank files, categorize your spending, track your bills and build a budget.">
+  <link rel="icon" type="image/png" href="images/app-icon.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="getting-started.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html"><img src="images/app-icon.png" alt="">mSpendVanta</a>
+      <nav class="nav" aria-label="Main">
+        <a class="hide-small" href="index.html#features">Features</a>
+        <a class="hide-small" href="index.html#pricing">Pricing</a>
+        <a href="getting-started.html" aria-current="page">Getting Started</a>
+        <a href="support.html">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="guide">
+    <nav class="guide-toc" aria-label="In this guide">
+      <p>In this guide</p>
+      <ol>
+        <li><a href="#how-it-works">1. How mSpendVanta works</a>
+          <ol>
+            <li><a href="#why">Why mSpendVanta</a></li>
+            <li><a href="#privacy">Privacy by design</a></li>
+            <li><a href="#bank-files">Bank files</a></li>
+            <li><a href="#categorizing">Categorizing</a></li>
+            <li><a href="#rules">Mapping rules</a></li>
+            <li><a href="#ai">AI suggestions</a></li>
+          </ol>
+        </li>
+        <li><a href="#importing">2. Import and categorize</a>
+          <ol>
+            <li><a href="#import">Import your bank files</a></li>
+            <li><a href="#unmatched">Work through Unmatched</a></li>
+            <li><a href="#vendors-categories">Vendors and categories</a></li>
+            <li><a href="#ignoring">Ignore what isn't spending</a></li>
+          </ol>
+        </li>
+        <li><a href="#bills">3. Track your bills</a></li>
+        <li><a href="#budgeting">4. Build a budget</a></li>
+      </ol>
+    </nav>
+
+    <article class="guide-body">
+      <h1>Getting Started</h1>
+      <p class="lead">Part 1 explains how mSpendVanta thinks about your money. Parts 2 to 4 take you from your first import to tracking bills and building a budget.</p>
+      <div class="key">
+        <p><strong>Want to look around first?</strong> mSpendVanta opens on sample data — a full set of accounts, transactions, bills and budgets — so you can try every screen before importing anything of your own.</p>
+      </div>
+
+      <!-- ===================================================== Part 1 -->
+      <section class="part" id="how-it-works">
+        <span class="part-label">Part 1</span>
+        <h2>How mSpendVanta works</h2>
+        <p class="intro">A few ideas shape the whole app. Knowing them makes everything else quicker.</p>
+
+        <div class="topic" id="why">
+          <h3>Why mSpendVanta</h3>
+          <p>Most of us see our money one statement, one receipt and one surprise bill at a time. Up close, it's hard to tell whether things are on track. mSpendVanta steps you back to the view that matters: what you spend, how it compares with your budget, and which bills are coming.</p>
+          <p>It's deliberately focused on <strong>spending</strong>. Many finance apps go much further, into net worth, investments and income, and ask you to connect every account to do it. mSpendVanta leaves those out. What you get is a short routine you can keep up: import, categorize, review.</p>
+        </div>
+
+        <div class="topic" id="privacy">
+          <h3>Privacy by design</h3>
+          <p>Your financial history says a great deal about you, so mSpendVanta is built to keep it yours:</p>
+          <ul>
+            <li><strong>No bank logins.</strong> The app never asks for your bank password and never connects to your bank. It works from the statement files your bank already lets you download.</li>
+            <li><strong>No servers of ours.</strong> Your data lives on your Mac and in a private iCloud database that belongs to your Apple Account, which is how it reaches your iPhone. We can't see it.</li>
+            <li><strong>No accounts, ads or tracking.</strong> There's nothing to sign up for, and nothing about you is collected.</li>
+          </ul>
+          <p>The one exception you can choose is AI suggestions, which can use Apple's private cloud. See <a href="#ai">AI suggestions</a> for exactly what that sends.</p>
+        </div>
+
+        <div class="topic" id="bank-files">
+          <h3>Bank files: use OFX or QFX</h3>
+          <p>Your bank's website lets you download your transactions, usually under <span class="ui">Download</span>, <span class="ui">Export</span> or <span class="ui">Statements</span>. Choose <strong>OFX</strong> or <strong>QFX</strong> (sometimes labelled "Quicken" or "Microsoft Money") whenever you can. These files:</p>
+          <ul>
+            <li>identify the account, so mSpendVanta sets the bank up for you;</li>
+            <li>include your current balance;</li>
+            <li>give each transaction an ID, so duplicates are caught reliably;</li>
+            <li>keep the payee and the memo apart, which makes categorizing cleaner.</li>
+          </ul>
+          <p>Use <strong>CSV</strong> only when your bank offers nothing else. It works, but you'll match the columns the first time, and it carries no balance.</p>
+          <div class="key"><p><strong>Pick one format per account and stick with it.</strong> Switching between CSV and OFX for the same account is the most common cause of duplicate transactions.</p></div>
+        </div>
+
+        <div class="topic" id="categorizing">
+          <h3>Categorizing: vendors, categories and match text</h3>
+          <p>Every transaction gets a <strong>category</strong> — what the money was for, like Groceries or Utilities. It can also get a <strong>vendor</strong> — who you paid, like Whole Foods. Vendors are optional: a cash withdrawal or a one-off purchase may need only a category. A vendor has a default category, so choosing Whole Foods fills in Groceries for you.</p>
+          <p>To recognize a transaction, mSpendVanta uses the <strong>description and memo</strong> from your bank, which often look like this:</p>
+          <p><code>SQ *BLUE BOTTLE COFFEE #12 DENVER CO</code></p>
+          <p>When you categorize, you choose the <strong>match text</strong>: the part of that text that identifies the merchant. Getting it right is what makes future imports sort themselves.</p>
+          <div class="table-wrap">
+            <table class="examples">
+              <thead><tr><th>Match text</th><th>Result</th></tr></thead>
+              <tbody>
+                <tr><td><code>BLUE BOTTLE COFFEE</code></td><td><span class="good">Good.</span> Specific to the merchant, and matches every visit.</td></tr>
+                <tr><td><code>COFFEE</code></td><td><span class="bad">Too broad.</span> Catches every coffee shop.</td></tr>
+                <tr><td><code>BLUE BOTTLE COFFEE #12 DENVER CO</code></td><td><span class="bad">Too specific.</span> Misses a visit to a different store or city.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Leave out things that change from charge to charge — dates, reference numbers, card numbers. mSpendVanta suggests match text for you and shows how many transactions it matches, so you can check before saving.</p>
+        </div>
+
+        <div class="topic" id="rules">
+          <h3>Mapping rules</h3>
+          <p>When you categorize a transaction for <span class="ui">All Transactions</span>, mSpendVanta saves a <strong>mapping rule</strong>: the match text, plus the vendor and category it stands for. From then on, every import categorizes matching transactions automatically. Only merchants you haven't seen before wait for you.</p>
+          <p>That's why the first import takes the longest and each one after is quicker. You can view, edit or delete rules from a vendor or category (<span class="path">Account Setup › Vendors</span> › Mapping Rules), but you rarely need to.</p>
+        </div>
+
+        <div class="topic" id="ai">
+          <h3>AI suggestions</h3>
+          <p>A first import can bring in thousands of transactions. On Macs with Apple Intelligence, mSpendVanta can suggest the vendor, category and match text for each new merchant, so you review and confirm instead of typing. It's the quickest way through a large import.</p>
+          <h4>Apple's Private Cloud Compute (recommended)</h4>
+          <p>Apple's larger cloud model gives noticeably better suggestions, especially for recognizing vendors. To answer, it receives only the transaction's description and memo, and your vendor and category names so it can choose from them. Apple uses this to answer, doesn't store it, and doesn't make it available to anyone — including Apple. It's on by default; Apple sets a daily limit, after which the on-device model takes over.</p>
+          <h4>On your Mac only</h4>
+          <p>Apple's on-device model runs entirely on your Mac and nothing leaves it. It's a smaller model: good at categories, less reliable at picking the right vendor.</p>
+          <h4>No AI at all</h4>
+          <p>If you'd rather nothing be suggested, turn suggestions off and categorize by hand. Your mapping rules still learn as you go.</p>
+          <p>Choose in <span class="path">Settings › AI Suggestions</span>.</p>
+        </div>
+      </section>
+
+      <!-- ===================================================== Part 2 -->
+      <section class="part" id="importing">
+        <span class="part-label">Part 2</span>
+        <h2>Import and categorize your transactions</h2>
+
+        <div class="topic" id="import">
+          <h3>Import your bank files</h3>
+          <ol class="how">
+            <li><div>On your bank's website, download your transactions as <strong>OFX or QFX</strong> (or CSV if that's all there is). The last 30 days is plenty for a routine import; for your first, download as much history as you'd like to see.</div></li>
+            <li><div>In mSpendVanta, click <span class="ui">Import</span> at the bottom of the sidebar and choose the file.</div></li>
+            <li><div><strong>OFX or QFX:</strong> mSpendVanta recognizes the account, or sets up a new bank for it, and shows the transactions. Click <span class="ui">Import</span>.<br><strong>CSV:</strong> choose the bank, then match the columns — date, description, a second description or memo if there is one, and amount. mSpendVanta remembers them for next time.</div></li>
+            <li><div>The summary shows how many transactions were imported, how many were already there and skipped, and how many your rules categorized.</div></li>
+          </ol>
+          <div class="key">
+            <p><strong>Make it a weekly routine.</strong> Every week or so, download the latest 30 days and import. Overlapping downloads are fine — transactions already imported are recognized and skipped, so there's nothing to keep track of. Your balances update each time.</p>
+          </div>
+          <p>Imported the wrong file? Delete it in <span class="path">Transactions › Import History</span>.</p>
+        </div>
+
+        <div class="topic" id="unmatched">
+          <h3>Work through Unmatched</h3>
+          <p>Anything your rules don't recognize waits in <span class="path">Categorize › Unmatched</span>. You can view it two ways:</p>
+          <ul>
+            <li><strong>By Merchant</strong> groups repeat charges from the same merchant. <strong>Start here</strong>: one decision categorizes every transaction in the group, and its rule catches the next ones.</li>
+            <li><strong>By Transaction</strong> lists each one on its own — for one-off purchases and anything left over.</li>
+          </ul>
+          <h4>Three ways to categorize</h4>
+          <ul>
+            <li><strong>AI Wizard</strong> takes you through them one at a time with suggestions ready. Adjust if needed, then <span class="ui">Assign</span> — or <span class="ui">Skip</span> to come back later. The fastest way through a big import.</li>
+            <li><strong>Ask AI</strong> on a row gets a suggestion for just that merchant or transaction.</li>
+            <li><strong>Categorize…</strong> opens the full editor to choose everything yourself.</li>
+          </ul>
+          <h4>Reviewing an AI suggestion</h4>
+          <p>The suggestion shows a vendor and category, the match text and the bank. Change the vendor or category from its menu, and trim the match text if needed — the line below it turns green when it matches every transaction in the group. Then:</p>
+          <ul>
+            <li><span class="ui">Accept</span> on the vendor-and-category row saves both, with a rule;</li>
+            <li><span class="ui">Accept</span> on the Category-only row saves just the category, without a vendor.</li>
+          </ul>
+          <h4>Categorizing by hand</h4>
+          <ol class="how">
+            <li><div>Click <span class="ui">Categorize…</span> on the row.</div></li>
+            <li><div>Choose a <strong>Vendor</strong> (optional) and a <strong>Category</strong> (required). Picking a vendor fills in its default category.</div></li>
+            <li><div>Trim the <strong>Mapping Text</strong> to the part that identifies the merchant, and check it still shows <span class="ui">Matches Transaction</span>.</div></li>
+            <li><div>Choose <span class="ui">All Transactions</span> to save it as a rule, or <span class="ui">This Transaction</span> for a one-off. Then <span class="ui">Save</span>.</div></li>
+          </ol>
+          <p>For a quick pick, use the category and vendor icons beside <span class="ui">Categorize…</span>, or right-click a row for <span class="ui">Quick Category</span> and <span class="ui">Quick Vendor</span>.</p>
+        </div>
+
+        <div class="topic" id="vendors-categories">
+          <h3>Create and edit vendors and categories</h3>
+          <p>You'll create most of them while categorizing. In any vendor or category menu, choose <span class="ui">Add/Edit…</span> and start typing: your existing names appear as you type, and <kbd>Tab</kbd> fills one in. Use an existing name where you can, so you don't end up with "Starbucks" and "Starbucks Coffee". A new vendor needs a category, which becomes its default.</p>
+          <p>To tidy up later, go to <span class="path">Account Setup › Vendors</span> or <span class="path">Categories</span>. There you can rename, change a vendor's default category, see its transactions and rules, <span class="ui">Merge…</span> duplicates, or delete one — its transactions keep their category.</p>
+        </div>
+
+        <div class="topic" id="ignoring">
+          <h3>Ignore what isn't spending</h3>
+          <p>Transfers between your own accounts, credit card payments and deposits aren't spending. Ignore them so the same money isn't counted twice. Right-click a transaction in Unmatched and choose:</p>
+          <ul>
+            <li><span class="ui">Ignore Transaction Only</span> — just this one.</li>
+            <li><span class="ui">Ignore Description Going Forward</span> — a rule that ignores this one, and future ones like it.</li>
+          </ul>
+          <p>The Categorize editor and the AI Wizard have Ignore buttons too.</p>
+          <h4>All banks, or one bank?</h4>
+          <p>A rule can apply to all your banks or only the one the transaction came from. Use <strong>All Banks</strong> when the text names a merchant. Use <strong>this bank</strong> for generic bank wording like <code>ONLINE TRANSFER</code> or <code>PAYMENT THANK YOU</code>, which can mean different things at different banks. mSpendVanta picks the sensible one for you.</p>
+          <p>To review or undo an ignore rule, go to <span class="path">Transactions › Ignore Rules</span>.</p>
+        </div>
+      </section>
+
+      <!-- ===================================================== Part 3 -->
+      <section class="part" id="bills">
+        <span class="part-label">Part 3</span>
+        <h2>Track your bills</h2>
+        <p>Because mSpendVanta has your transaction history, it can find your recurring payments — rent, utilities, subscriptions, loans, insurance — and turn them into bills you can follow through the month.</p>
+        <ul>
+          <li><strong>Auto Pay</strong> bills are paid automatically. mSpendVanta matches each payment as you import it, and flags any that come in higher than expected.</li>
+          <li><strong>Manual</strong> bills are ones you pay yourself. mSpendVanta shows what's due so you remember to schedule the payment, lets you mark it paid, and lets you update the amount when the bill changes.</li>
+        </ul>
+
+        <div class="topic">
+          <h3>Create your bills</h3>
+          <ol class="how">
+            <li><div>Go to <span class="path">Budgeting › Bills</span> and click <span class="ui">Create Bills…</span>.</div></li>
+            <li><div>mSpendVanta lists the recurring payments it found that don't have a bill yet. Switch off any you don't want, then create them.</div></li>
+            <li><div>Open a bill to set its amount, due day, the months it's due, and whether it's Auto Pay or manual.</div></li>
+            <li><div>For a bill it didn't find — a new one, or one paid only certain months of the year — click <span class="ui">New Bill…</span>.</div></li>
+          </ol>
+          <p>Then check <span class="path">Reporting › Bill Payments</span> to see what's paid, what's coming, and what still needs scheduling.</p>
+        </div>
+      </section>
+
+      <!-- ===================================================== Part 4 -->
+      <section class="part" id="budgeting">
+        <span class="part-label">Part 4</span>
+        <h2>Build a budget</h2>
+        <p>mSpendVanta budgets your spending in two parts:</p>
+        <ul>
+          <li><strong>Recurring payments</strong> — bills, subscriptions and loans, paid on a schedule at much the same amount. Each is budgeted for the months it's due.</li>
+          <li><strong>Everyday spending</strong> — groceries, dining, fuel and the like, which varies. Each category gets a monthly amount.</li>
+        </ul>
+        <p>Rather than starting from a blank page, mSpendVanta builds a budget from what you actually spent, which you then adjust.</p>
+
+        <div class="topic">
+          <h3>Create a budget template</h3>
+          <ol class="how">
+            <li><div>Go to <span class="path">Budgeting › Templates</span> and click <span class="ui">New Template…</span>. Choose the history to start from, and optionally adjust for price increases and round the amounts.</div></li>
+            <li><div>Review each category. Set its everyday amount — use the history average, or 10% less or more — and check its recurring payments. Switch off anything that isn't really recurring. <span class="ui">Recurring Payments</span> at the top shows them all in one list.</div></li>
+            <li><div>Assign the template to a year. One template can be reused for several years.</div></li>
+          </ol>
+          <p>Then open <span class="path">Reporting › Budget Performance</span> to compare what you spent with the budget, month by month — where you're over, why, and where the year is heading.</p>
+        </div>
+      </section>
+
+      <div class="key" style="margin-top: 48px;">
+        <p><strong>Need a hand?</strong> See <a href="support.html">Support</a> for common questions, or get in touch.</p>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© 2026 Meg Software. mSpendVanta is not affiliated with any bank.</span>
+      <nav aria-label="Footer">
+        <a href="getting-started.html">Getting Started</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
