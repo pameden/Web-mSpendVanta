@@ -1,3 +1,6 @@
+---
+# Processed by GitHub Pages (Jekyll) to insert the shared header and footer.
+---
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,17 +12,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="wrap">
-      <a class="brand" href="index.html"><img src="images/app-icon.png" alt="">mSpendVanta</a>
-      <nav class="nav" aria-label="Main">
-        <a class="hide-small" href="index.html#features">Features</a>
-        <a class="hide-small" href="index.html#pricing">Pricing</a>
-        <a href="getting-started.html">Getting Started</a>
-        <a href="support.html" aria-current="page">Support</a>
-      </nav>
-    </div>
-  </header>
+  {% include header.html %}
 
   <main class="doc">
     <h1>Support</h1>
@@ -82,16 +75,6 @@
     </details>
   </main>
 
-  <footer class="site-footer">
-    <div class="wrap">
-      <span>© 2026 Meg Software. mSpendVanta is not affiliated with any bank.</span>
-      <nav aria-label="Footer">
-        <a href="getting-started.html">Getting Started</a>
-        <a href="support.html" aria-current="page">Support</a>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Use</a>
-      </nav>
-    </div>
-  </footer>
+  {% include footer.html %}
 </body>
 </html>

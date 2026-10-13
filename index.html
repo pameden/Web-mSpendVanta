@@ -1,3 +1,6 @@
+---
+# Processed by GitHub Pages (Jekyll) to insert the shared header and footer.
+---
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,34 +11,28 @@
   <link rel="icon" type="image/png" href="images/app-icon.png">
   <link rel="apple-touch-icon" href="images/app-icon.png">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="carousel.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="wrap">
-      <a class="brand" href="index.html"><img src="images/app-icon.png" alt="">mSpendVanta</a>
-      <nav class="nav" aria-label="Main">
-        <a class="hide-small" href="#features">Features</a>
-        <a class="hide-small" href="#pricing">Pricing</a>
-        <a href="getting-started.html">Getting Started</a>
-        <a href="support.html">Support</a>
-      </nav>
-    </div>
-  </header>
+  {% include header.html %}
 
   <main>
     <!-- Hero -->
     <section class="hero">
-      <div class="wrap">
-        <img class="icon" src="images/app-icon.png" alt="mSpendVanta app icon" width="128" height="128">
-        <h1>mSpendVanta</h1>
-        <p class="tagline">Your Spend Vantage Point.</p>
-        <p class="lead">Most of us see our money one statement, one receipt and one surprise bill at a time. mSpendVanta steps you back to the view that matters — what you spend, how it compares with your budget, and which bills are coming — so you can see where your money is really going.</p>
-        <div class="actions">
-          <!-- TODO: Replace with the Mac App Store link and Apple's "Download on the Mac App Store" badge once the app is live. -->
-          <a class="button" href="#pricing">Coming Soon to the Mac App Store</a>
-          <a class="button secondary" href="#how-it-works">See How It Works</a>
+      <div class="wrap hero-split">
+        <div class="hero-text">
+          <img class="icon" src="images/app-icon.png" alt="mSpendVanta app icon" width="128" height="128">
+          <h1>mSpendVanta</h1>
+          <p class="tagline">Your Spend Vantage Point.</p>
+          <p class="lead">Most of us see our money one statement, one receipt and one surprise bill at a time. mSpendVanta steps you back to the view that matters — what you spend, how it compares with your budget, and which bills are coming — so you can see where your money is really going.</p>
+          <div class="actions">
+            <!-- TODO: Replace with the Mac App Store link and Apple's "Download on the Mac App Store" badge once the app is live. -->
+            <a class="button" href="#pricing">Coming Soon to the Mac App Store</a>
+            <a class="button secondary" href="#how-it-works">See How It Works</a>
+          </div>
+          <p class="note">For Mac, with a free companion app for iPhone.</p>
         </div>
-        <p class="note">For Mac, with a free companion app for iPhone.</p>
+        <img class="hero-image" src="images/cover.png" alt="mSpendVanta on the Mac, showing Spend Analysis for groceries" width="2668" height="1944">
       </div>
     </section>
 
@@ -134,14 +131,65 @@
           </div>
           <div class="card">
             <span class="emoji" aria-hidden="true">✨</span>
-            <h3>Smart suggestions, on device</h3>
-            <p>On Macs with Apple Intelligence, mSpendVanta can suggest vendors and categories. It all runs on your Mac.</p>
+            <h3>Smart suggestions, privately</h3>
+            <p>On Macs with Apple Intelligence, mSpendVanta suggests vendors and categories — with Apple's Private Cloud Compute, which doesn't keep your data, or entirely on your Mac if you prefer.</p>
           </div>
           <div class="card">
             <span class="emoji" aria-hidden="true">🧪</span>
             <h3>Try it with sample data</h3>
             <p>Explore a fully set-up example — a year and a half of transactions, budgets and bills — before you import anything of your own.</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screenshots -->
+    <section id="screenshots">
+      <div class="wrap">
+        <h2>See it in action</h2>
+        <p class="section-lead">A look around mSpendVanta, shown with its built-in sample data.</p>
+        <div class="carousel" aria-roledescription="carousel" aria-label="mSpendVanta screenshots">
+          <div class="carousel-track" tabindex="0">
+          <figure class="carousel-slide">
+            <img src="images/Screen%201.png" alt="mSpendVanta Overview screen. Spending, bills, budget and bank balances on one screen." width="3448" height="2616">
+            <figcaption><strong>Overview</strong> — Spending, bills, budget and bank balances on one screen.</figcaption>
+          </figure>
+          <figure class="carousel-slide">
+            <img src="images/Screen%202.png" alt="mSpendVanta Spend Analysis screen. See where your money goes by category or vendor, month by month." width="3448" height="2616" loading="lazy">
+            <figcaption><strong>Spend Analysis</strong> — See where your money goes by category or vendor, month by month.</figcaption>
+          </figure>
+          <figure class="carousel-slide">
+            <img src="images/Screen%203.png" alt="mSpendVanta Budget Performance screen. Track every category against your budget across the year." width="3448" height="2616" loading="lazy">
+            <figcaption><strong>Budget Performance</strong> — Track every category against your budget across the year.</figcaption>
+          </figure>
+          <figure class="carousel-slide">
+            <img src="images/Screen%204.png" alt="mSpendVanta Bill Payments screen. A timeline of what's due, what's paid and what's coming up." width="3448" height="2616" loading="lazy">
+            <figcaption><strong>Bill Payments</strong> — A timeline of what's due, what's paid and what's coming up.</figcaption>
+          </figure>
+          <figure class="carousel-slide">
+            <img src="images/Screen%205.png" alt="mSpendVanta Categorize screen. Review new transactions and assign a vendor and category in a click." width="3448" height="2616" loading="lazy">
+            <figcaption><strong>Categorize</strong> — Review new transactions and assign a vendor and category in a click.</figcaption>
+          </figure>
+          <figure class="carousel-slide">
+            <img src="images/Screen%206.png" alt="mSpendVanta Banks screen. Balances and account types across all your banks." width="3448" height="2616" loading="lazy">
+            <figcaption><strong>Banks</strong> — Balances and account types across all your banks.</figcaption>
+          </figure>
+          <figure class="carousel-slide">
+            <img src="images/Screen%207.png" alt="mSpendVanta Vendors screen. Spending and recent activity for every vendor." width="3448" height="2616" loading="lazy">
+            <figcaption><strong>Vendors</strong> — Spending and recent activity for every vendor.</figcaption>
+          </figure>
+          <figure class="carousel-slide">
+            <img src="images/Screen%208.png" alt="mSpendVanta Categories screen. Spending and trends for each of your categories." width="3448" height="2616" loading="lazy">
+            <figcaption><strong>Categories</strong> — Spending and trends for each of your categories.</figcaption>
+          </figure>
+          <figure class="carousel-slide">
+            <img src="images/Screen%209.png" alt="mSpendVanta AI Categorization Wizard screen. Suggested vendors and categories, privately, one transaction at a time." width="3448" height="2616" loading="lazy">
+            <figcaption><strong>AI Categorization Wizard</strong> — Suggested vendors and categories, privately, one transaction at a time.</figcaption>
+          </figure>
+          </div>
+          <button class="carousel-button prev" type="button" aria-label="Previous screenshot">&#8249;</button>
+          <button class="carousel-button next" type="button" aria-label="Next screenshot">&#8250;</button>
+          <div class="carousel-dots"></div>
         </div>
       </div>
     </section>
@@ -173,16 +221,7 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="wrap">
-      <span>© 2026 Meg Software. mSpendVanta is not affiliated with any bank.</span>
-      <nav aria-label="Footer">
-        <a href="getting-started.html">Getting Started</a>
-        <a href="support.html">Support</a>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Use</a>
-      </nav>
-    </div>
-  </footer>
+  {% include footer.html %}
+  <script src="carousel.js"></script>
 </body>
 </html>

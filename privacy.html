@@ -1,3 +1,6 @@
+---
+# Processed by GitHub Pages (Jekyll) to insert the shared header and footer.
+---
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,28 +12,16 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="wrap">
-      <a class="brand" href="index.html"><img src="images/app-icon.png" alt="">mSpendVanta</a>
-      <nav class="nav" aria-label="Main">
-        <a class="hide-small" href="index.html#features">Features</a>
-        <a class="hide-small" href="index.html#pricing">Pricing</a>
-        <a href="getting-started.html">Getting Started</a>
-        <a href="support.html">Support</a>
-      </nav>
-    </div>
-  </header>
+  {% include header.html %}
 
   <main class="doc">
     <h1>Privacy Policy</h1>
-    <p class="updated">Effective October 4, 2026</p>
+    <p class="updated">Effective October 13, 2026</p>
 
     <div class="summary">
-      <p><strong>The short version:</strong> mSpendVanta doesn't collect your personal information. Your financial data is stored on your devices and in your own iCloud account, where we can't see it. We don't run servers that receive your data, and the app contains no advertising or analytics.</p>
+      <p><strong>The short version:</strong> mSpendVanta doesn't collect your personal information. Your financial data is stored on your devices and in your own iCloud account, where we can't see it. We don't run servers that receive your data, and the app contains no advertising or analytics. If you use AI suggestions with Apple's Private Cloud Compute, the text of a transaction is sent to Apple to suggest a vendor and category — never to us.</p>
     </div>
-
-    <!-- TODO: Replace [Your Company Name] throughout with your legal or business name. -->
-    <p>This policy explains how mSpendVanta for Mac and the mSpendVanta companion app for iPhone (together, "the app"), made by [Your Company Name] ("we", "us"), handle information. It also covers this website.</p>
+    <p>This policy explains how mSpendVanta for Mac and the mSpendVanta companion app for iPhone (together, "the app"), made by Meg Software ("we", "us"), handle information. It also covers this website.</p>
 
     <h2>Your financial data</h2>
     <p>The app works with information you choose to give it: the statement files you download from your bank or credit card company (OFX, QFX or CSV), and the accounts, transactions, vendors, categories, rules, budgets and bills you create.</p>
@@ -41,7 +32,13 @@
     </ul>
 
     <h2>Suggestions powered by Apple Intelligence</h2>
-    <p>On Macs that support Apple Intelligence, the app can suggest vendors and categories for your transactions. These suggestions are made by Apple's on-device model, entirely on your Mac. Transaction details aren't sent to us or to any other service for this. You can turn suggestions off in the app's Settings.</p>
+    <p>On Macs that support Apple Intelligence, the app can suggest a vendor and category for your transactions. You choose how, in the app's Settings under AI Suggestions:</p>
+    <ul>
+      <li><strong>Apple's Private Cloud Compute.</strong> Apple's larger model, running on Apple's servers, makes the suggestions. To do this, the app sends Apple the transaction's description and memo; the descriptions of a few similar past transactions, with the vendor and category you gave them; and the names of your vendors and categories so the model can choose from them. Amounts, dates, balances and your account details aren't sent, and before sending, the app removes phone numbers and the cardholder names and account numbers some banks include in descriptions. Apple uses this information only to answer the request, doesn't store it, and doesn't make it available to anyone, including Apple. Private Cloud Compute is provided by Apple and covered by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>; you can read how it protects your data in Apple's <a href="https://security.apple.com/blog/private-cloud-compute/">Private Cloud Compute overview</a>. This option is on by default on Macs where it's available.</li>
+      <li><strong>On your Mac only.</strong> Apple's on-device model makes the suggestions entirely on your Mac, and nothing leaves it. The app also uses this model when Private Cloud Compute is turned off, isn't available, or has reached Apple's daily limit.</li>
+      <li><strong>Off.</strong> You can turn suggestions off altogether and categorize your transactions yourself.</li>
+    </ul>
+    <p>Whichever you choose, transaction details are never sent to us.</p>
 
     <h2>Purchases and subscriptions</h2>
     <p>Purchases and subscriptions are handled by Apple through your Apple Account. We never see or store your payment details. To confirm what you've purchased, the app checks your purchase records with Apple's StoreKit on your device. Apple provides us with sales reports that don't identify you personally. Apple's handling of your purchases is covered by Apple's Privacy Policy.</p>
@@ -69,16 +66,6 @@
     <p>Questions about privacy? Email us at <a href="mailto:support@megsoftware.com">Meg Software</a>.</p>
   </main>
 
-  <footer class="site-footer">
-    <div class="wrap">
-      <span>© 2026 Meg Software. mSpendVanta is not affiliated with any bank.</span>
-      <nav aria-label="Footer">
-        <a href="getting-started.html">Getting Started</a>
-        <a href="support.html">Support</a>
-        <a href="privacy.html" aria-current="page">Privacy Policy</a>
-        <a href="terms.html">Terms of Use</a>
-      </nav>
-    </div>
-  </footer>
+  {% include footer.html %}
 </body>
 </html>

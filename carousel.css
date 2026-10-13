@@ -1,0 +1,84 @@
+/* Screenshot carousel on the home page. Builds on styles.css (same tokens). */
+
+.carousel { position: relative; margin-top: 32px; }
+
+/* Slides sit side by side and snap into place; swiping and trackpads scroll natively. */
+.carousel-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  outline: none;
+}
+.carousel-track::-webkit-scrollbar { display: none; }
+.carousel-track:focus-visible { box-shadow: 0 0 0 3px var(--accent-soft); border-radius: var(--radius); }
+
+.carousel-slide {
+  flex: 0 0 100%;
+  margin: 0;
+  scroll-snap-align: center;
+  text-align: center;
+}
+.carousel-slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3448 / 2616;
+}
+.carousel-slide figcaption {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 16px;
+}
+.carousel-slide figcaption strong { color: var(--text); }
+
+/* Back / forward buttons over the screenshot's edges */
+.carousel-button {
+  position: absolute;
+  top: calc(50% - 22px);
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: var(--shadow);
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+.carousel-button:hover { color: var(--accent); }
+.carousel-button:disabled { opacity: 0.35; cursor: default; color: var(--text); }
+.carousel-button.prev { left: -8px; }
+.carousel-button.next { right: -8px; }
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+.carousel-dots button {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--border);
+  cursor: pointer;
+}
+.carousel-dots button[aria-current="true"] { background: var(--accent); }
+
+@media (max-width: 640px) {
+  .carousel-button { width: 36px; height: 36px; font-size: 18px; }
+  .carousel-button.prev { left: 0; }
+  .carousel-button.next { right: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel-track { scroll-behavior: auto; }
+}

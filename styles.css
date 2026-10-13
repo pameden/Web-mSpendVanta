@@ -74,7 +74,7 @@ img { max-width: 100%; height: auto; }
 .brand:hover { text-decoration: none; }
 .brand img { width: 32px; height: 32px; }
 .nav { display: flex; gap: 20px; font-size: 15px; }
-.nav a { color: var(--muted); }
+.nav a { color: var(--muted); white-space: nowrap; }
 .nav a:hover, .nav a[aria-current="page"] { color: var(--text); text-decoration: none; }
 
 /* Buttons */
@@ -117,6 +117,28 @@ img { max-width: 100%; height: auto; }
 }
 .hero .actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 .hero .note { margin-top: 14px; font-size: 14px; color: var(--muted); }
+
+/* Hero text on the left, the cover screenshot on the right; stacked on narrow screens. */
+.hero-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 48px;
+  align-items: center;
+  text-align: left;
+}
+.hero-split img.icon { width: 96px; height: 96px; }
+.hero-split h1 { margin-top: 16px; }
+.hero-split p.lead { margin-left: 0; margin-right: 0; font-size: 18px; }
+.hero-split .actions { justify-content: flex-start; }
+.hero-split .button { padding: 12px 18px; font-size: 16px; }
+.hero-image { display: block; width: 100%; height: auto; }
+
+@media (max-width: 900px) {
+  .hero-split { grid-template-columns: 1fr; text-align: center; gap: 32px; }
+  .hero-split p.lead { margin-left: auto; margin-right: auto; }
+  .hero-split .actions { justify-content: center; }
+  .hero-image { max-width: 640px; margin: 0 auto; }
+}
 
 /* Sections */
 section { padding: 56px 0; }

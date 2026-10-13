@@ -1,0 +1,10 @@
+{%- comment -%} Site header, shared by every page. Edit here; GitHub Pages (Jekyll) inserts it where a page includes header.html. {%- endcomment %}
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html"><img src="images/app-icon.png" alt="">mSpendVanta</a>
+      <nav class="nav" aria-label="Main">
+        <a href="getting-started.html"{% if page.url == "/getting-started.html" %} aria-current="page"{% endif %}>Getting Started</a>
+        <a href="support.html"{% if page.url == "/support.html" %} aria-current="page"{% endif %}>Support</a>
+      </nav>
+    </div>
+  </header>

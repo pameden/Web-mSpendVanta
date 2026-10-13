@@ -1,0 +1,12 @@
+{%- comment -%} Site footer, shared by every page. Edit here; GitHub Pages (Jekyll) inserts it where a page includes footer.html. {%- endcomment %}
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© 2026 Meg Software. mSpendVanta is not affiliated with any bank.</span>
+      <nav aria-label="Footer">
+        <a href="getting-started.html"{% if page.url == "/getting-started.html" %} aria-current="page"{% endif %}>Getting Started</a>
+        <a href="support.html"{% if page.url == "/support.html" %} aria-current="page"{% endif %}>Support</a>
+        <a href="privacy.html"{% if page.url == "/privacy.html" %} aria-current="page"{% endif %}>Privacy Policy</a>
+        <a href="terms.html"{% if page.url == "/terms.html" %} aria-current="page"{% endif %}>Terms of Use</a>
+      </nav>
+    </div>
+  </footer>

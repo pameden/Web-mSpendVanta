@@ -1,3 +1,6 @@
+---
+# Processed by GitHub Pages (Jekyll) to insert the shared header and footer.
+---
 <!doctype html>
 <html lang="en">
 <head>
@@ -10,17 +13,7 @@
   <link rel="stylesheet" href="getting-started.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="wrap">
-      <a class="brand" href="index.html"><img src="images/app-icon.png" alt="">mSpendVanta</a>
-      <nav class="nav" aria-label="Main">
-        <a class="hide-small" href="index.html#features">Features</a>
-        <a class="hide-small" href="index.html#pricing">Pricing</a>
-        <a href="getting-started.html" aria-current="page">Getting Started</a>
-        <a href="support.html">Support</a>
-      </nav>
-    </div>
-  </header>
+  {% include header.html %}
 
   <main class="guide">
     <nav class="guide-toc" aria-label="In this guide">
@@ -121,7 +114,7 @@
           <h3>AI suggestions</h3>
           <p>A first import can bring in thousands of transactions. On Macs with Apple Intelligence, mSpendVanta can suggest the vendor, category and match text for each new merchant, so you review and confirm instead of typing. It's the quickest way through a large import.</p>
           <h4>Apple's Private Cloud Compute (recommended)</h4>
-          <p>Apple's larger cloud model gives noticeably better suggestions, especially for recognizing vendors. To answer, it receives only the transaction's description and memo, and your vendor and category names so it can choose from them. Apple uses this to answer, doesn't store it, and doesn't make it available to anyone — including Apple. It's on by default; Apple sets a daily limit, after which the on-device model takes over.</p>
+          <p>Apple's larger cloud model gives noticeably better suggestions, especially for recognizing vendors. To answer, it receives only the transaction's description and memo, a few similar past transactions with the vendor and category you gave them, and your vendor and category names so it can choose from them — never amounts, dates, balances or account details. Apple uses this to answer, doesn't store it, and doesn't make it available to anyone — including Apple. It's on by default; Apple sets a daily limit, after which the on-device model takes over.</p>
           <h4>On your Mac only</h4>
           <p>Apple's on-device model runs entirely on your Mac and nothing leaves it. It's a smaller model: good at categories, less reliable at picking the right vendor.</p>
           <h4>No AI at all</h4>
@@ -248,16 +241,6 @@
     </article>
   </main>
 
-  <footer class="site-footer">
-    <div class="wrap">
-      <span>© 2026 Meg Software. mSpendVanta is not affiliated with any bank.</span>
-      <nav aria-label="Footer">
-        <a href="getting-started.html">Getting Started</a>
-        <a href="support.html">Support</a>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Use</a>
-      </nav>
-    </div>
-  </footer>
+  {% include footer.html %}
 </body>
 </html>

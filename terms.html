@@ -1,3 +1,6 @@
+---
+# Processed by GitHub Pages (Jekyll) to insert the shared header and footer.
+---
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,17 +12,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="wrap">
-      <a class="brand" href="index.html"><img src="images/app-icon.png" alt="">mSpendVanta</a>
-      <nav class="nav" aria-label="Main">
-        <a class="hide-small" href="index.html#features">Features</a>
-        <a class="hide-small" href="index.html#pricing">Pricing</a>
-        <a href="getting-started.html">Getting Started</a>
-        <a href="support.html">Support</a>
-      </nav>
-    </div>
-  </header>
+  {% include header.html %}
 
   <main class="doc">
     <h1>Terms of Use</h1>
@@ -28,9 +21,7 @@
     <div class="summary">
       <p><strong>The short version:</strong> mSpendVanta is licensed to you under Apple's standard terms. Purchases and subscriptions are handled by Apple. The app helps you organize your own information — it isn't financial advice, and its estimates may not match your actual balances.</p>
     </div>
-
-    <!-- TODO: Replace [Your Company Name] throughout with your legal or business name. -->
-    <p>These terms apply to mSpendVanta for Mac and the mSpendVanta companion app for iPhone (together, "the app"), made by [Your Company Name] ("we", "us"). By downloading or using the app, you agree to these terms.</p>
+    <p>These terms apply to mSpendVanta for Mac and the mSpendVanta companion app for iPhone (together, "the app"), made by Meg Software ("we", "us"). By downloading or using the app, you agree to these terms.</p>
 
     <h2>Your license</h2>
     <p>The app is licensed, not sold, to you under Apple's <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Licensed Application End User License Agreement</a> (the "Apple EULA"). These terms add to the Apple EULA; where they conflict, the Apple EULA applies.</p>
@@ -73,16 +64,6 @@
     <p>Questions about these terms? Email us at <a href="mailto:support@megsoftware.com">Meg Software</a>.</p>
   </main>
 
-  <footer class="site-footer">
-    <div class="wrap">
-      <span>© 2026 Meg Software. mSpendVanta is not affiliated with any bank.</span>
-      <nav aria-label="Footer">
-        <a href="getting-started.html">Getting Started</a>
-        <a href="support.html">Support</a>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html" aria-current="page">Terms of Use</a>
-      </nav>
-    </div>
-  </footer>
+  {% include footer.html %}
 </body>
 </html>
