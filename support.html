@@ -36,7 +36,7 @@
 
     <details>
       <summary>Will importing the same transactions twice create duplicates?</summary>
-      <p>No. Downloads can overlap; transactions you've already imported are recognized and skipped.</p>
+      <p>No. Downloads can overlap; transactions you've already imported are recognized and skipped. The one exception is re-importing while iCloud is turned off for mSpendVanta — see <a href="#icloud-off">My data disappeared from my Mac</a> below.</p>
     </details>
 
     <details>
@@ -47,6 +47,13 @@
     <details>
       <summary>Why doesn't my iPhone show my data?</summary>
       <p>The iPhone app shows what you've imported on your Mac, synced through iCloud. Make sure both devices are signed in to the same Apple Account with iCloud turned on, and give it a few minutes after importing. The iPhone app is read-only — importing and editing happen on your Mac.</p>
+    </details>
+
+    <details id="icloud-off">
+      <summary>My data disappeared from my Mac. Where did it go?</summary>
+      <p>Your data is still safe in iCloud. When iCloud is turned off for mSpendVanta, or you sign out of iCloud, macOS removes mSpendVanta's copy of your synced data from that Mac. This keeps it private if someone else uses the Mac. When iCloud is off, mSpendVanta shows an orange cloud with a slash in its toolbar.</p>
+      <p>To get your data back, turn iCloud on again for mSpendVanta: on your Mac, open System Settings › [your name] › iCloud, click See All next to Saved to iCloud, and turn on mSpendVanta. Then reopen mSpendVanta and give it a few minutes to download everything.</p>
+      <p><strong>Please don't import your bank files again while iCloud is off.</strong> Anything you add while iCloud is off is combined with your iCloud data when you turn it back on, so re-imported transactions — and any banks, categories or vendors you set up again — would appear twice. mSpendVanta warns you if you try.</p>
     </details>
 
     <details>
@@ -76,5 +83,14 @@
   </main>
 
   {% include footer.html %}
+  <script>
+    // Opens a question when a link points at it (e.g. support.html#icloud-off).
+    function openLinkedQuestion() {
+      var target = document.getElementById(location.hash.slice(1));
+      if (target && target.tagName === 'DETAILS') target.open = true;
+    }
+    addEventListener('hashchange', openLinkedQuestion);
+    openLinkedQuestion();
+  </script>
 </body>
 </html>
