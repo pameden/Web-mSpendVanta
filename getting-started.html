@@ -9,8 +9,9 @@
   <title>Getting Started — mSpendVanta</title>
   <meta name="description" content="New to mSpendVanta? Learn how it works, then import your first bank files, categorize your spending, track your bills and build a budget.">
   <link rel="icon" type="image/png" href="images/app-icon.png">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="getting-started.css">
+  <!-- ?v= is the site's build time (Jekyll), so browsers fetch fresh files after every update instead of using cached ones. -->
+  <link rel="stylesheet" href="styles.css?v={{ site.time | date: '%s' }}">
+  <link rel="stylesheet" href="getting-started.css?v={{ site.time | date: '%s' }}">
 </head>
 <body>
   {% include header.html %}

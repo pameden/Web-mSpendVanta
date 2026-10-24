@@ -10,8 +10,9 @@
   <meta name="description" content="mSpendVanta for Mac turns the statement files your bank already offers into a clear view of your spending, budgets and upcoming bills. No bank logins — your data stays on your Mac and in your own iCloud.">
   <link rel="icon" type="image/png" href="images/app-icon.png">
   <link rel="apple-touch-icon" href="images/app-icon.png">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="carousel.css">
+  <!-- ?v= is the site's build time (Jekyll), so browsers fetch fresh files after every update instead of using cached ones. -->
+  <link rel="stylesheet" href="styles.css?v={{ site.time | date: '%s' }}">
+  <link rel="stylesheet" href="carousel.css?v={{ site.time | date: '%s' }}">
 </head>
 <body>
   {% include header.html %}
@@ -250,6 +251,6 @@
   </main>
 
   {% include footer.html %}
-  <script src="carousel.js"></script>
+  <script src="carousel.js?v={{ site.time | date: '%s' }}"></script>
 </body>
 </html>

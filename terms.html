@@ -9,7 +9,8 @@
   <title>Terms of Use — mSpendVanta</title>
   <meta name="description" content="Terms of use for mSpendVanta for Mac and the mSpendVanta companion app for iPhone.">
   <link rel="icon" type="image/png" href="images/app-icon.png">
-  <link rel="stylesheet" href="styles.css">
+  <!-- ?v= is the site's build time (Jekyll), so browsers fetch fresh files after every update instead of using cached ones. -->
+  <link rel="stylesheet" href="styles.css?v={{ site.time | date: '%s' }}">
 </head>
 <body>
   {% include header.html %}
