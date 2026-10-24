@@ -118,6 +118,15 @@ img { max-width: 100%; height: auto; }
 .hero .actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 .hero .note { margin-top: 14px; font-size: 14px; color: var(--muted); }
 
+/* Apple's official Mac App Store and App Store badges (black; white in dark mode), side by side */
+.store-badges { display: inline-flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+.store-badge { display: inline-block; line-height: 0; }
+.store-badge img { height: 54px; width: auto; }
+.hero .actions { align-items: center; }
+
+/* The App Store badge below the plans */
+.store-cta { text-align: center; margin: 32px 0 0; }
+
 /* Hero text on the left, the cover screenshot on the right; stacked on narrow screens. */
 .hero-split {
   display: grid;
